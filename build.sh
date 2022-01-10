@@ -27,7 +27,7 @@ if [ $? -eq 0 ]; then
 fi
 
 # Install PyYAML for portability
-/usr/local/bin/pip3 install --target=${TPM_DIR} pyyaml
+/opt/homebrew/bin/pip3 install --target=${TPM_DIR} pyyaml
 
 # To provide your own python path, just add '/path/to/python' after './build'
 # For example: ./build.sh /usr/bin/env python3.7
@@ -37,7 +37,7 @@ if [[ ! -z ${1} ]]; then
 fi
 
 # Build the zipapp version of the python package
-/usr/local/bin/python3 -m zipapp "${PYTHON_PKG_SRC_DIR}" \
+/opt/homebrew/bin/python3 -m zipapp "${PYTHON_PKG_SRC_DIR}" \
     --compress \
     --output "${TCCPROFILE_ZIP_FILE}" \
     --python="${PYTHON_SHEBANG}"
